@@ -1,0 +1,228 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+  font-size: clamp(1.8rem, 6vw, 3rem);
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.config-section {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.config-section label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 16px;
+}
+
+.config-input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 15px;
+  margin-bottom: 10px;
+  transition: all 0.3s;
+}
+
+.config-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.config-section small {
+  color: #666;
+  font-size: 13px;
+  display: block;
+}
+
+.upload-section {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+#file-input {
+  display: none;
+}
+
+.upload-btn {
+  display: inline-block;
+  padding: 16px 40px;
+  background: white;
+  color: #667eea;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.upload-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+}
+
+.preview-section {
+  text-align: center;
+  margin-bottom: 25px;
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.preview-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.analyze-btn {
+  padding: 16px 50px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.4);
+}
+
+.analyze-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(102, 126, 234, 0.5);
+}
+
+.analyze-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.results-section {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  margin-top: 25px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.results-section h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: clamp(1.4rem, 5vw, 2rem);
+  font-weight: 700;
+}
+
+.answers {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: left;
+  font-size: 16px;
+  line-height: 2;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-x: auto;
+  min-height: 50px;
+  color: #333;
+  border: 2px solid #e9ecef;
+  font-family: 'Courier New', monospace;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  .config-section {
+    padding: 20px;
+  }
+  
+  .upload-btn, .analyze-btn {
+    padding: 14px 30px;
+    font-size: 15px;
+    width: 100%;
+  }
+  
+  .preview-section {
+    padding: 15px;
+  }
+  
+  .results-section {
+    padding: 20px;
+  }
+  
+  .answers {
+    font-size: 14px;
+    padding: 20px;
+    line-height: 1.8;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .config-section {
+    padding: 15px;
+  }
+  
+  .config-input {
+    font-size: 14px;
+    padding: 12px;
+  }
+  
+  .upload-btn, .analyze-btn {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+  
+  .results-section {
+    padding: 15px;
+  }
+  
+  .answers {
+    font-size: 13px;
+    padding: 15px;
+  }
+}

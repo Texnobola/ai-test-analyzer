@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    
+    .splash-container {
+      text-align: center;
+      animation: fadeIn 1s ease-in;
+    }
+    
+    .logo {
+      width: 150px;
+      height: 150px;
+      background: white;
+      border-radius: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 30px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      animation: bounce 2s infinite;
+    }
+    
+    .logo-text {
+      font-size: 48px;
+      font-weight: bold;
+      color: #667eea;
+    }
+    
+    h1 {
+      color: white;
+      font-size: 32px;
+      font-weight: 700;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      animation: slideUp 1s ease-out;
+    }
+    
+    .subtitle {
+      color: rgba(255,255,255,0.9);
+      font-size: 16px;
+      margin-top: 10px;
+      animation: slideUp 1s ease-out 0.2s both;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="splash-container">
+    <div class="logo">
+      <div class="logo-text">DTM</div>
+    </div>
+    <h1>DTM Analyzer</h1>
+    <p class="subtitle">AI Test Tahlilchisi</p>
+  </div>
+</body>
+</html>

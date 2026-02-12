@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">DTM Analyzer</string>
+    <string name="title_activity_main">DTM Analyzer</string>
+    <string name="package_name">com.dtm.analyzer</string>
+    <string name="custom_url_scheme">com.dtm.analyzer</string>
+</resources>
