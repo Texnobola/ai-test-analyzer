@@ -88,7 +88,7 @@ Bo'sh savollarni yozmaslik!`
       const response = await window.puter.ai.chat(
         SYSTEM_PROMPT,
         preview,
-        { model: 'gemini-3-pro-preview' }
+        { model: 'gemini-3-flash-preview' }
       )
       setAnswers(response.message.content || 'No content')
     } catch (error) {
